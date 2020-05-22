@@ -6,13 +6,13 @@ Python 3
 
 ### running/testing
 
-Clone this repository
+1. Clone this repository
 
-to test a specific file:
+2. To test a specific file:
 
      python file_name.py
      
- to test with different datasets, add the inputs to the file. For example
+ 3. To test with different datasets, add the inputs to the file. For example
      
      function_name(new value)
      
