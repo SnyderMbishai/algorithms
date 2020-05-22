@@ -9,6 +9,7 @@ Python 3
 Clone this repository
 
 to test a specific file:
+
      python file_name.py
      
  to test with different datasets, add the inputs to the file. For example
@@ -17,4 +18,4 @@ to test a specific file:
      
      
  ### comments
- Fell free to leave comments incase of bugs, improvements, questions or just "comments"
+ Feel free to leave comments incase of bugs, improvements, questions or just "comments"
