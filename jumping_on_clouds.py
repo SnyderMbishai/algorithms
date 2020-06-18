@@ -40,3 +40,4 @@ def jumpingOnClouds(c):
             position += 1
 
     return steps
+    
