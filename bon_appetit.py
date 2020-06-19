@@ -47,11 +47,11 @@ def bonAppetit(bill, k, b):
 # optimized
 def bonAppetit1(bill, k, b):
     diff = b - ((sum(bill)-bill[k])//2)
-    print(diff if diff else "Bon Apettit")
+    print(diff if diff else "Bon Appetit")
 
 # better yet
 def bonAppetit2(bill, k, b):
-    print(b - ((sum(bill)-bill[k])//2) or "Bon Apettit")
+    print(b - ((sum(bill)-bill[k])//2) or "Bon Appetit")
 
 if __name__=='__main__':
     bonAppetit( [3, 10, 2, 9] , 1, 12)
