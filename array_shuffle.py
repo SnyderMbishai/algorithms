@@ -24,27 +24,30 @@ nums.length == 2n
 
 """
 
+
 def shuffle(nums, n):
     shuffled = []
     for i in range(n):
         shuffled.append(nums[i])
-        shuffled.append(nums[i+n])
+        shuffled.append(nums[i + n])
     return shuffled
 
-def shuffle1(nums,n):
+
+def shuffle1(nums, n):
     shuffled = []
     for i in range(n):
         shuffled += [nums[i]]
-        shuffled += [nums[i+n]]
+        shuffled += [nums[i + n]]
     return shuffled
 
-def shuffle2(nums,n):
+
+def shuffle2(nums, n):
     shuffled = []
-    for i,j in zip(nums[:n], nums[n:]):
-        shuffled += [i,j]
+    for i, j in zip(nums[:n], nums[n:]):
+        shuffled += [i, j]
     return shuffled
 
 
-print(shuffle([2,5,1,3,4,7], 3))
-print(shuffle1([2,5,1,3,4,7], 3))
-print(shuffle2([2,5,1,3,4,7], 3))
+print(shuffle([2, 5, 1, 3, 4, 7], 3))
+print(shuffle1([2, 5, 1, 3, 4, 7], 3))
+print(shuffle2([2, 5, 1, 3, 4, 7], 3))

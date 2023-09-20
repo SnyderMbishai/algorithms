@@ -35,13 +35,14 @@ Output Format
 Print a single integer that denotes the number of valleys Gary walked through during his hike.
 """
 
+
 def countingValleys(n, s):
     valleys = 0
     sea_level = 0
-    
-    for i in range(n):                
-        if s[i]=="U":        
-            sea_level += 1         
+
+    for i in range(n):
+        if s[i] == "U":
+            sea_level += 1
         else:
             if sea_level == 0:
                 valleys += 1
@@ -49,7 +50,8 @@ def countingValleys(n, s):
 
     return valleys
 
-if __name__=='__main__':
+
+if __name__ == "__main__":
     a = "UDDDUDUU"
     b = "DDUUDDUDUUUD"
     print(countingValleys(8, a))

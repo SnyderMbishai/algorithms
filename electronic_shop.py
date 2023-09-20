@@ -39,10 +39,10 @@ and one USB drive, print -1 instead.
 LINK: https://www.hackerrank.com/challenges/electronics-shop/problem
 """
 
+
 # with built-in max
 def getMoneySpent(keyboards, drives, b):
-    return max([k+d for k in keyboards for d in drives if k+d <= b]+[-1])
-
+    return max([k + d for k in keyboards for d in drives if k + d <= b] + [-1])
 
 
 # without built-in max
@@ -50,14 +50,15 @@ def getMoneySpent1(keyboards, drives, b):
     mx = -1
     for k in keyboards:
         for d in drives:
-            s =k+d
+            s = k + d
             if s <= b and s > mx:
-                mx = s           
+                mx = s
     return mx
 
-if __name__=='__main__':
-    k = [3,1]
-    d = [5,2,8]
+
+if __name__ == "__main__":
+    k = [3, 1]
+    d = [5, 2, 8]
     b = 10
-    print(getMoneySpent(k,d,b))
-    print(getMoneySpent1(k,d,b))
+    print(getMoneySpent(k, d, b))
+    print(getMoneySpent1(k, d, b))

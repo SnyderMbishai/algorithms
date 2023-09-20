@@ -38,14 +38,19 @@ Output Format:
 Print the full date of Day of the Programmer during year y in the format dd.mm.yyyy, where dd is the two-digit day, mm is the two-digit month, and yyyy is y.
 
 """
+
+
 # Optimized
 def dayOfProgrammer(year):
     if year == 1918:
-        return '26.09.1918'
-    if (year < 1918 and year % 4 == 0) or (year % 400 == 0 or year % 4 == 0 and year % 100 != 0):
-        return '12.09.%s'%year
+        return "26.09.1918"
+    if (year < 1918 and year % 4 == 0) or (
+        year % 400 == 0 or year % 4 == 0 and year % 100 != 0
+    ):
+        return "12.09.%s" % year
     else:
-        return '13.09.%s'%year
+        return "13.09.%s" % year
+
 
 # First draft
 def dayOfProgrammer1(year):
@@ -56,20 +61,19 @@ def dayOfProgrammer1(year):
     if year in range(1700, 1918):
         if year % 4 == 0:
             # is leap
-            return leap%(year)
+            return leap % (year)
         else:
             # not leap
-            return normal%(year)
+            return normal % (year)
 
     elif year == 1918:
         return "26.09." + str(year)
 
-    #Gregorian
+    # Gregorian
     else:
         if year % 400 == 0:
-            return leap%(year)
+            return leap % (year)
         elif year % 4 == 0 and year % 100 != 0:
-            return leap%(year)
+            return leap % (year)
         else:
-            return normal%(year)
-            
+            return normal % (year)

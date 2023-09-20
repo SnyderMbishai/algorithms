@@ -26,18 +26,20 @@ Output Format
 Print an integer denoting the total number of ways that Lily can portion her chocolate bar to share with Ron.
 """
 
-def birthday(s, d, m):   
+
+def birthday(s, d, m):
     no_of_ways = 0
     for i in range(len(s)):
         count = 0
         current_sum = 0
-        while count < m and (i+count < len(s)):
-            current_sum += s[ i + count ]
+        while count < m and (i + count < len(s)):
+            current_sum += s[i + count]
             count += 1
-        
+
         if current_sum == d:
             no_of_ways += 1
-    
+
     return no_of_ways
+
 
 burthdays([1, 2, 1, 3, 2], 3, 2)

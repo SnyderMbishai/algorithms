@@ -88,14 +88,15 @@ The hourglass with the maximum sum (19) is:
 
 """
 
+
 def hourglassSum(arr):
     highest_sum = -63
     for i in range(4):
         for j in range(4):
-            r1 = arr[i][j]+arr[i][j+1]+arr[i][j+2]
-            r2 = arr[i+1][j+1]
-            r3 = arr[i+2][j]+arr[i+2][j+1]+arr[i+2][j+2]            
-            sm = r1+r2+r3
+            r1 = arr[i][j] + arr[i][j + 1] + arr[i][j + 2]
+            r2 = arr[i + 1][j + 1]
+            r3 = arr[i + 2][j] + arr[i + 2][j + 1] + arr[i + 2][j + 2]
+            sm = r1 + r2 + r3
             if sm > highest_sum:
                 highest_sum = sm
     return highest_sum

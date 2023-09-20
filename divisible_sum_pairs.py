@@ -30,18 +30,19 @@ Output Format
 Print the number of (i,j) pairs where i<j and a[i] + a[j] is evenly divisible by k.
 """
 
+
 # Complete the divisibleSumPairs function below.
-def divisibleSumPairs(n, k, ar):  
+def divisibleSumPairs(n, k, ar):
     count = 0
-    for a,b in enumerate(ar):
-        for c in ar[a+1:]:
-            if (b+c) % k == 0:
+    for a, b in enumerate(ar):
+        for c in ar[a + 1 :]:
+            if (b + c) % k == 0:
                 count += 1
     return count
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     n = 6
     k = 5
-    ar = [1,2,3,4,5,6]
+    ar = [1, 2, 3, 4, 5, 6]
     print(divisibleSumPairs(n, k, ar))
-

@@ -28,16 +28,16 @@ Output Format
 Print the minimum number of jumps needed to win the game.
 """
 
-def jumpingOnClouds(c):  
+
+def jumpingOnClouds(c):
     steps = 0
     position = 0
 
-    while position < len(c)-1: 
-        steps += 1    
-        if position + 2 < len(c) and c[position+2] != 1:                        
+    while position < len(c) - 1:
+        steps += 1
+        if position + 2 < len(c) and c[position + 2] != 1:
             position += 2
-        else:            
+        else:
             position += 1
 
     return steps
-    

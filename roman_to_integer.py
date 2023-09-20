@@ -19,8 +19,9 @@ C can be placed before D (500) and M (1000) to make 400 and 900.
 Given a roman numeral, convert it to an integer.
 """
 
+
 class Solution:
-    def get_value(self,symbol):
+    def get_value(self, symbol):
         if symbol == "I":
             return 1
         if symbol == "V":
@@ -35,19 +36,19 @@ class Solution:
             return 500
         if symbol == "M":
             return 1000
-        
+
     def romanToInt(self, s: str) -> int:
         i = 0
         total = 0
         while i < len(s):
             a = self.get_value(s[i])
-            if i+1 > len(s)-1:
+            if i + 1 > len(s) - 1:
                 total += a
                 i += 1
-            else:            
-                b = self.get_value(s[i+1])
+            else:
+                b = self.get_value(s[i + 1])
                 if a < b:
-                    total += (b-a)
+                    total += b - a
                     i += 2
                 if a > b:
                     total += a
@@ -56,5 +57,6 @@ class Solution:
                     total += a
                     i += 1
         return total
-                
-print(Solution().romanToInt('III'))
+
+
+print(Solution().romanToInt("III"))

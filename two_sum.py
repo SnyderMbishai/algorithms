@@ -31,21 +31,21 @@ Only one valid answer exists.
 """
 
 
-
 # def twoSum(nums, target:
 #     for idx, value in enumerate(nums):
 #         diff = target - value
 #         if diff in nums and nums.index(diff) != idx:
 #             return idx, nums.index(diff)
 
-def twoSumNoRepeats(nums, target):
-    for idx,number in enumerate(nums):
-        other_number = target - number            
-        if other_number in nums[idx+1:]:
-            return idx, nums[idx+1:].index(other_number)+idx+1
-            
 
-if __name__=='__main__':
-    arr = [5,3,5]
+def twoSumNoRepeats(nums, target):
+    for idx, number in enumerate(nums):
+        other_number = target - number
+        if other_number in nums[idx + 1 :]:
+            return idx, nums[idx + 1 :].index(other_number) + idx + 1
+
+
+if __name__ == "__main__":
+    arr = [5, 3, 5]
     target = 10
-    print(twoSumNoRepeats(arr,target))
+    print(twoSumNoRepeats(arr, target))

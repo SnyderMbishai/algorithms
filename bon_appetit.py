@@ -36,24 +36,28 @@ Output Format:
 If Brian did not overcharge Anna, print Bon Appetit on a new line; otherwise, print the difference (i.e., charged-actual ) that Brian must refund to Anna. This will always be an integer.
 """
 
+
 # first draft
 def bonAppetit(bill, k, b):
-    to_pay = (sum(bill)-bill[k]) // 2
+    to_pay = (sum(bill) - bill[k]) // 2
     if to_pay == b:
         print("Bon Appetit")
     else:
         print(b - to_pay)
 
+
 # optimized
 def bonAppetit1(bill, k, b):
-    diff = b - ((sum(bill)-bill[k])//2)
+    diff = b - ((sum(bill) - bill[k]) // 2)
     print(diff if diff else "Bon Appetit")
+
 
 # better yet
 def bonAppetit2(bill, k, b):
-    print(b - ((sum(bill)-bill[k])//2) or "Bon Appetit")
+    print(b - ((sum(bill) - bill[k]) // 2) or "Bon Appetit")
 
-if __name__=='__main__':
-    bonAppetit( [3, 10, 2, 9] , 1, 12)
-    bonAppetit1( [3, 10, 2, 9] , 1, 12)
-    bonAppetit2( [3, 10, 2, 9] , 1, 12)
+
+if __name__ == "__main__":
+    bonAppetit([3, 10, 2, 9], 1, 12)
+    bonAppetit1([3, 10, 2, 9], 1, 12)
+    bonAppetit2([3, 10, 2, 9], 1, 12)

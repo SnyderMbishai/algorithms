@@ -7,4 +7,5 @@ def solution(n, arr):
         checked.append(i)
     return False
 
-print(solution(10, [5,7,1,2,8,4,3]))
+
+print(solution(10, [5, 7, 1, 2, 8, 4, 3]))

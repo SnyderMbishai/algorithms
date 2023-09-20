@@ -9,6 +9,7 @@ def crude_solution(arr):
         if key_count[item] < 2:
             return item
 
+
 def crude_solution2(arr):
     checked = []
     for i in arr:
@@ -17,6 +18,8 @@ def crude_solution2(arr):
                 return i
             else:
                 checked.append(i)
+
+
 def solution(arr):
     n = len(arr)
     res = arr[0]
@@ -24,11 +27,12 @@ def solution(arr):
         res = res ^ arr[i]
     return res
 
+
 # Hashing - better solution O(n) complexity but takes more storage
-print(crude_solution([1,1,2,2,3]))
+print(crude_solution([1, 1, 2, 2, 3]))
 # O(n2)
-print(crude_solution2([1,1,2,2,3]))
-#XOR - exclusive or
-#if the bits are the same, result is zero, 0
-#XOR of a number with 0 is number itself
-print(solution([1,1,2,2,3]))
+print(crude_solution2([1, 1, 2, 2, 3]))
+# XOR - exclusive or
+# if the bits are the same, result is zero, 0
+# XOR of a number with 0 is number itself
+print(solution([1, 1, 2, 2, 3]))

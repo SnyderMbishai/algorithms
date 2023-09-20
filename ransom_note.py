@@ -33,6 +33,7 @@ Constraints
 Each word consists of English alphabetic letters (i.e., a to z and A to Z).
 """
 
+
 def checkMagazine(magazine, note):
     if len(note) > len(magazine):
         print("No")
@@ -45,6 +46,7 @@ def checkMagazine(magazine, note):
             magazine.remove(word)
     print("Yes")
     return
+
 
 def checkMagazineOptimal(magazine, note):
     diff = Counter(note) - Counter(magazine) == {}

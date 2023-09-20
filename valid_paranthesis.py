@@ -35,10 +35,11 @@ Constraints:
 s consists of parentheses only '()[]{}'.
 """
 
-class Solution:        
+
+class Solution:
     def isValid(self, s):
         v = []
-        k_v = {')':'(', '}':'{', ']':'['}
+        k_v = {")": "(", "}": "{", "]": "["}
         for c in s:
             if c in k_v.values():
                 v.append(c)
@@ -50,14 +51,14 @@ class Solution:
         return v == []
 
     # not good -> takes more time and worse complexity
-    def isValid2(self,s):
-        while '()' in s or '{}' in s or '[]' in s:
-            s = s.replace('()','').replace('{}','').replace('[]','')
-        return s == ''
+    def isValid2(self, s):
+        while "()" in s or "{}" in s or "[]" in s:
+            s = s.replace("()", "").replace("{}", "").replace("[]", "")
+        return s == ""
 
 
-if __name__=='__main__':
-    samples = ["()", "()[]{}", "(]",  "([)]", "{[]}"]
+if __name__ == "__main__":
+    samples = ["()", "()[]{}", "(]", "([)]", "{[]}"]
     # T, T, F, F, T
     for i in samples:
         print(Solution().isValid(i))

@@ -36,12 +36,14 @@ Sample Output 0
 7
 """
 
+
 def repeatedString(s, n):
     # s.count('a') saves memory and time taken
-    occurrence = ((n//len(s)) * s.count('a')) + (s[0:n%len(s)].count('a'))
+    occurrence = ((n // len(s)) * s.count("a")) + (s[0 : n % len(s)].count("a"))
     return occurrence
 
-if __name__=='__main__':
-    s = 'aba'
-    n=10
-    print(repeatedString(s,n))
+
+if __name__ == "__main__":
+    s = "aba"
+    n = 10
+    print(repeatedString(s, n))

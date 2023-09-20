@@ -37,10 +37,11 @@ For each query, return Cat A if cat A catches the mouse first, Cat B if cat B ca
 LINK: https://www.hackerrank.com/challenges/cats-and-a-mouse/problem
 """
 
+
 # first draft
 def catAndMouse(x, y, z):
-    a = abs(z-x)
-    b = abs(z-y)
+    a = abs(z - x)
+    b = abs(z - y)
     if a == b:
         return "Mouse C"
     elif a < b:
@@ -48,13 +49,15 @@ def catAndMouse(x, y, z):
     else:
         return "Cat B"
 
+
 # restructured
 def catAndMouse1(x, y, z):
-    a = abs(z-x)
-    b = abs(z-y)
-    return (["Cat A", "Cat B", "Mouse C"][0 if a<b else 1 if b<a else 2 ])
+    a = abs(z - x)
+    b = abs(z - y)
+    return ["Cat A", "Cat B", "Mouse C"][0 if a < b else 1 if b < a else 2]
 
-if __name__=='__main__':
-    x,y,z = 1,2,3
-    print(catAndMouse(x,y,z))
-    print(catAndMouse1(x,y,z))
+
+if __name__ == "__main__":
+    x, y, z = 1, 2, 3
+    print(catAndMouse(x, y, z))
+    print(catAndMouse1(x, y, z))

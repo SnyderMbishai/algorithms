@@ -11,4 +11,3 @@ of roads that are connected to either of the two cities.
 Write a function that given two arrays A,B consisting of M integers each and an integer N, where A[i] and
 B[i] are cities at the two ends of the i-th road, returns the maximum network rank in the whole infrastructure.
 """
-

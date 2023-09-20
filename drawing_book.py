@@ -32,21 +32,23 @@ Output Format
 Print an integer denoting the minimum number of pages Brie must turn to get to page p.
 """
 
+
 # first draft
 def pageCount(n, p):
-    if p <= n//2:
-        return p//2
+    if p <= n // 2:
+        return p // 2
     else:
-        if n%2 == 0:
-            return ((n-p)+1)//2
+        if n % 2 == 0:
+            return ((n - p) + 1) // 2
         else:
-            return(n-(p))//2
+            return (n - (p)) // 2
+
 
 # optimized
-def pageCount1(n,p):
-    return min(p//2, n//2 - p//2)
+def pageCount1(n, p):
+    return min(p // 2, n // 2 - p // 2)
 
-if __name__=='__main__':
-    print(pageCount(6,3))
-    print(pageCount1(6,3))
 
+if __name__ == "__main__":
+    print(pageCount(6, 3))
+    print(pageCount1(6, 3))
