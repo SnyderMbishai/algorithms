@@ -23,7 +23,7 @@ Example 3:
 
 Input: nums = [1]
 Output: 1
- 
+
 Constraints:
 
 1 <= nums.length <= 3 * 104
